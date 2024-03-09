@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QUIZAPP_BAGHDAD_GHAZI" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.QUIZAPP_BAGHDAD_GHAZI" parent="Base.Theme.QUIZAPP_BAGHDAD_GHAZI" />
+</resources>

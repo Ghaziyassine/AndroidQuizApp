@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46364621203",
+    "project_id": "quiapp-ef259",
+    "storage_bucket": "quiapp-ef259.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46364621203:android:00892c397e368244899066",
+        "android_client_info": {
+          "package_name": "com.example.quizapp_baghdad_ghazi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_DorjwQqk92LwlmEPWJ6iYjZTWXPlaUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
