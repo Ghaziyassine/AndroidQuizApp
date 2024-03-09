@@ -3,6 +3,7 @@ package com.example.quizapp_baghdad_ghazi;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
 public class registerActivity extends AppCompatActivity {
 
     private EditText etName;
@@ -22,6 +24,7 @@ public class registerActivity extends AppCompatActivity {
     private EditText etPassword;
     private EditText etConfirmPassword;
     private Button btnRegister;
+    private Button bBack;
 
     private FirebaseAuth mAuth;
 
@@ -39,14 +42,40 @@ public class registerActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         etConfirmPassword = findViewById(R.id.etConfirmPassword);
         btnRegister = findViewById(R.id.bLogin); // Button text should be "register" based on your layout
-
+        bBack = (Button) findViewById(R.id.bBack);
         // Set click listener for register button
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registerUser();
+                String email = etEmail.getText().toString();
+                String password = etPassword.getText().toString();
+                if (TextUtils.isEmpty(email)) {
+                    etEmail.setError("Email is required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(password)) {
+                    etPassword.setError("Password is required");
+                    return;
+                }
+                // Password and confirm password comparison
+                if (!password.equals(etConfirmPassword.getText().toString())) {
+                    etConfirmPassword.setError("Passwords DO NOT MATCH!");
+                    return;
+                } else {
+                    registerUser();
+                }
             }
         });
+        bBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to activity_login.xml
+                Intent loginIntent = new Intent(registerActivity.this, loginActivity.class);
+                startActivity(loginIntent);
+            }
+        });
+
     }
 
     private void registerUser() {
