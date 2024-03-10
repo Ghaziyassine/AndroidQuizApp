@@ -1,0 +1,43 @@
+<resources>
+    <string-array name="questions">
+        <item>Question 1</item>
+        <item>Question 2</item>
+        <item>Question 3</item>
+        <!-- Add more questions as needed -->
+    </string-array>
+
+    <array name="options1">
+        <item>Option 1A</item>
+        <item>Option 1B</item>
+        <item>Option 1C</item>
+    </array>
+
+    <array name="options2">
+        <item>Option 2A</item>
+        <item>Option 2B</item>
+        <item>Option 2C</item>
+    </array>
+
+    <array name="options3">
+        <item>Option 3A</item>
+        <item>Option 3B</item>
+        <item>Option 3C</item>
+    </array>
+
+    <!-- Add more option arrays as needed -->
+
+    <integer-array name="answers">
+        <item>1</item> <!-- Index of correct answer for Question 1 -->
+        <item>2</item> <!-- Index of correct answer for Question 2 -->
+        <item>0</item> <!-- Index of correct answer for Question 3 -->
+        <!-- Add more correct answers as needed -->
+    </integer-array>
+
+    <!-- Image names for questions -->
+    <string-array name="image_names">
+        <item>image1</item>
+        <item>image2</item>
+        <item>image3</item>
+        <!-- Add more image names as needed -->
+    </string-array>
+</resources>
