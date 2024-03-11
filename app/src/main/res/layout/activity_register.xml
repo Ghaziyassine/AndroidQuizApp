@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".loginActivity">
+    tools:context=".registerActivity">
 
     <!-- Background with Split Color -->
     <ImageView
@@ -15,10 +14,9 @@
         android:scaleType="centerCrop"
         android:src="@drawable/logo" />
 
-
-    <!-- Login Container -->
+    <!-- Register Container -->
     <LinearLayout
-        android:id="@+id/loginContainer"
+        android:id="@+id/registerContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -27,15 +25,16 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
             android:fontFamily="fantasy"
             android:gravity="center"
-            android:text="Login"
+            android:text="Create new Account"
             android:textColor="@color/black"
-            android:textSize="45sp"
+            android:textSize="41sp"
             android:textStyle="bold" />
+
+
         <!-- Name EditText -->
         <EditText
             android:id="@+id/etName"
@@ -43,11 +42,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/baseline_account_circle_24"
             android:hint="Full Name"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:padding="12dp"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
+
         <!-- Email EditText -->
         <EditText
             android:id="@+id/etLogin"
@@ -75,7 +76,8 @@
             android:padding="12dp"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
-        <!-- Password EditText -->
+
+        <!-- Confirm Password EditText -->
         <EditText
             android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
@@ -83,13 +85,13 @@
             android:layout_margin="16dp"
             android:background="@drawable/rounded_button"
             android:drawableLeft="@drawable/baseline_lock_24"
-            android:hint="confirm Password"
+            android:hint="Confirm Password"
             android:inputType="textPassword"
             android:padding="12dp"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
-        <!-- Sign In Button -->
+        <!-- Register Button -->
         <Button
             android:id="@+id/bLogin"
             android:layout_width="wrap_content"
@@ -97,22 +99,21 @@
             android:layout_gravity="center"
             android:layout_margin="16dp"
             android:backgroundTint="@color/black"
-            android:text="Sign up"
+            android:text="Sign Up"
             android:textColor="@color/white"
-            android:textSize="20sp" /> <!-- Set background here -->
+            android:textSize="20sp" />
 
-        <!-- Back  Button -->
-        <Button
-            android:id="@+id/bBack"
+
+        <!-- Back to Login TextView -->
+        <TextView
+            android:id="@+id/tvBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:backgroundTint="@color/black"
-            android:text="Back"
-            android:textColor="@color/white"
-            android:textSize="20sp" /> <!-- Set background here -->
-
+            android:layout_marginBottom="50dp"
+            android:text="Already Registered? Log in here."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </RelativeLayout>

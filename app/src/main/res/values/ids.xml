@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ids.xml -->
+
 <resources>
     <item name="quizLayout" type="id" />
     <item name="tvQuestionNumber" type="id" />

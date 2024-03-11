@@ -12,7 +12,20 @@
           "package_name": "com.example.quizapp_baghdad_ghazi"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "46364621203-bn0osjad340h567hagf877hbjbrt6ctb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quizapp_baghdad_ghazi",
+            "certificate_hash": "74bb3178e16b1bb5aed008a97590992188b8a656"
+          }
+        },
+        {
+          "client_id": "46364621203-gqt3gisshnv4oq02kgtavekqnt4t0u3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC_DorjwQqk92LwlmEPWJ6iYjZTWXPlaUk"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46364621203-gqt3gisshnv4oq02kgtavekqnt4t0u3g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

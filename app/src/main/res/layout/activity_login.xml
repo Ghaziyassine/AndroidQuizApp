@@ -14,7 +14,6 @@
         android:src="@drawable/logo" />
 
 
-
     <!-- Login Container -->
     <LinearLayout
         android:id="@+id/loginContainer"
@@ -28,13 +27,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
             android:fontFamily="fantasy"
             android:gravity="center"
             android:text="Login"
             android:textColor="@color/black"
             android:textSize="45sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:fontFamily="fantasy"
+            android:gravity="center"
+            android:text="Sign in to continue."
+            android:textColor="@color/black"
+            android:textSize="15sp" />
         <!-- Email EditText -->
         <EditText
             android:id="@+id/etLogin"
@@ -68,13 +76,19 @@
             android:id="@+id/bLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
             android:layout_gravity="center"
+            android:backgroundTint="@color/black"
             android:text="Sign In"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:backgroundTint="@color/black"/>
-
+            android:textSize="20sp" />
+        <!-- Google Sign-In Button -->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleSignInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
 
         <!-- Register TextView -->
         <TextView
@@ -82,7 +96,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="50dp"
 
             android:text="Don't have an account? Register here"

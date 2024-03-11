@@ -2,4 +2,9 @@
     <string name="app_name">QUIZAPP_BAGHDAD_GHAZI</string>
     <string name="question_number">Question %1$d/%2$d</string>
 
+    <!-- Facebook Sign-In Button -->
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+    <string name="client_id">46364621203-gqt3gisshnv4oq02kgtavekqnt4t0u3g.apps.googleusercontent.com</string>
 </resources>

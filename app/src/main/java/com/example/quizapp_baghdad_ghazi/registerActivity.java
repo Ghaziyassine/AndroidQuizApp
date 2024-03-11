@@ -24,7 +24,7 @@ public class registerActivity extends AppCompatActivity {
     private EditText etPassword;
     private EditText etConfirmPassword;
     private Button btnRegister;
-    private Button bBack;
+    private TextView tvBack;
 
     private FirebaseAuth mAuth;
 
@@ -42,7 +42,7 @@ public class registerActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         etConfirmPassword = findViewById(R.id.etConfirmPassword);
         btnRegister = findViewById(R.id.bLogin); // Button text should be "register" based on your layout
-        bBack = (Button) findViewById(R.id.bBack);
+        tvBack =  findViewById(R.id.tvBack);
         // Set click listener for register button
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +67,7 @@ public class registerActivity extends AppCompatActivity {
                 }
             }
         });
-        bBack.setOnClickListener(new View.OnClickListener() {
+        tvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Navigate to activity_login.xml
