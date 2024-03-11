@@ -41,7 +41,7 @@ public class ScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate back to MainActivity to play again
-                Intent intent = new Intent(ScoreActivity.this, MainActivity.class);
+                Intent intent = new Intent(ScoreActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish(); // Close this activity to prevent going back to it with the back button
             }
