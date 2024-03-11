@@ -6,32 +6,37 @@
     android:id="@+id/quizLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     android:padding="20dp">
+
     <TextView
         android:id="@+id/tvQuestionNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:gravity="center"
-        android:text="Question 1/10" />
+        android:text="Question 1/10"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
         android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         android:visibility="gone" />
+
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="This is the question that will be displayed"
+        android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:text="This is the question that will be displayed" />
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/rgAnswers"
@@ -68,9 +73,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Next Question" />
-
-
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="Next " />
 
 
 </LinearLayout>

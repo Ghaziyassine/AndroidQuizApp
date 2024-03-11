@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         options = new String[][]{
                 getResources().getStringArray(R.array.options1),
                 getResources().getStringArray(R.array.options2),
-                getResources().getStringArray(R.array.options3)
+                getResources().getStringArray(R.array.options3),
                 // Add more arrays as needed
         };
         answers = getResources().getIntArray(R.array.answers);
