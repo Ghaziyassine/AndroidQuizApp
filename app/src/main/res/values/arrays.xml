@@ -3,6 +3,9 @@
         <item>Question 1</item>
         <item>Question 2</item>
         <item>Question 3</item>
+        <item>Question 4</item>
+        <item>Question 5</item>
+
         <!-- Add more questions as needed -->
     </string-array>
 
@@ -10,18 +13,34 @@
         <item>Option 1A</item>
         <item>Option 1B</item>
         <item>Option 1C</item>
+        <item>Option 1D</item>
     </array>
 
     <array name="options2">
         <item>Option 2A</item>
         <item>Option 2B</item>
         <item>Option 2C</item>
+        <item>Option 2D</item>
     </array>
 
     <array name="options3">
         <item>Option 3A</item>
         <item>Option 3B</item>
         <item>Option 3C</item>
+        <item>Option 3D</item>
+    </array>
+
+    <array name="options4">
+        <item>Option 4A</item>
+        <item>Option 4B</item>
+        <item>Option 4C</item>
+        <item>Option 4D</item>
+    </array>
+    <array name="options5">
+        <item>Option 4A</item>
+        <item>Option 4B</item>
+        <item>Option 4C</item>
+        <item>Option 4D</item>
     </array>
 
     <!-- Add more option arrays as needed -->
@@ -30,8 +49,12 @@
         <item>1</item> <!-- Index of correct answer for Question 1 -->
         <item>2</item> <!-- Index of correct answer for Question 2 -->
         <item>0</item> <!-- Index of correct answer for Question 3 -->
+        <item>3</item> <!-- Index of correct answer for Question 4 -->
+        <item>3</item> <!-- Index of correct answer for Question 4 -->
+
         <!-- Add more correct answers as needed -->
     </integer-array>
+
 
     <!-- Image names for questions -->
     <string-array name="image_names">
