@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/black"
             android:text="Sign up"
             android:textColor="@color/white"
             android:textSize="20sp" /> <!-- Set background here -->
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/black"
             android:text="Back"
             android:textColor="@color/white"
             android:textSize="20sp" /> <!-- Set background here -->

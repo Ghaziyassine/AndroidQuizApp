@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="quizLayout" type="id" />
+    <item name="tvQuestionNumber" type="id" />
+    <item name="tvQuestion" type="id" />
+    <item name="rgAnswers" type="id" />
+    <item name="rbOption1" type="id" />
+    <item name="rbOption2" type="id" />
+    <item name="rbOption3" type="id" />
+    <item name="rbOption4" type="id" />
+    <item name="bNext" type="id" />
+</resources>

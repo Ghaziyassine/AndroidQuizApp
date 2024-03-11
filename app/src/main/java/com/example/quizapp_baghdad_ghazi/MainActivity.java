@@ -1,28 +1,26 @@
 package com.example.quizapp_baghdad_ghazi;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private LinearLayout quizLayout;
     private TextView tvQuestionNumber;
-    private ImageView imageView;  // Added this line
+    private ImageView imageView;
     private TextView tvQuestion;
     private RadioGroup rgAnswers;
     private Button bNext;
-    private ProgressBar progressBar;
 
     private String[] questions;
     private String[][] options;
@@ -39,11 +37,10 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Views
         quizLayout = findViewById(R.id.quizLayout);
         tvQuestionNumber = findViewById(R.id.tvQuestionNumber);
-        imageView = findViewById(R.id.imageView); // Initialize imageView
+        imageView = findViewById(R.id.imageView);
         tvQuestion = findViewById(R.id.tvQuestion);
         rgAnswers = findViewById(R.id.rgAnswers);
         bNext = findViewById(R.id.bNext);
-        progressBar = findViewById(R.id.progressBar);
 
         // Initialize Questions, Options, and Answers
         questions = getResources().getStringArray(R.array.questions);
@@ -58,28 +55,34 @@ public class MainActivity extends AppCompatActivity {
         // Display initial question
         displayQuestion(currentQuestionIndex);
 
-        bNext.setOnClickListener(v -> {
-            // Check if an answer is selected
-            if (rgAnswers.getCheckedRadioButtonId() == -1) {
-                Toast.makeText(MainActivity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
-                return;
-            }
+        bNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check if an answer is selected
+                if (rgAnswers.getCheckedRadioButtonId() == -1) {
+                    Toast.makeText(MainActivity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-            // Get selected answer index
-            int selectedAnswerIndex = rgAnswers.indexOfChild(findViewById(rgAnswers.getCheckedRadioButtonId()));
+                // Get selected answer index
+                int selectedAnswerIndex = rgAnswers.indexOfChild(findViewById(rgAnswers.getCheckedRadioButtonId()));
 
-            // Check if answer is correct
-            if (selectedAnswerIndex == answers[currentQuestionIndex]) {
-                score++;
-            }
+                // Check if answer is correct
+                if (selectedAnswerIndex == answers[currentQuestionIndex]) {
+                    score++;
+                }
 
-            // Move to next question or show score
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
-                displayQuestion(currentQuestionIndex);
-            } else {
-                // Quiz completed, show score
-                showScore();
+                // Move to next question or show score
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion(currentQuestionIndex);
+                } else {
+                    // Quiz completed, show score
+                    Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                    intent.putExtra("TOTAL_QUESTIONS", questions.length);
+                    intent.putExtra("CORRECT_ANSWERS", score);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -113,24 +116,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         rgAnswers.clearCheck();
-    }
-
-
-    private void showScore() {
-        quizLayout.setVisibility(View.GONE);
-        progressBar.setVisibility(View.VISIBLE);
-
-        int maxScore = questions.length;
-        int progress = (int) ((score / (float) maxScore) * 100);
-
-        progressBar.setProgress(progress);
-        progressBar.setIndeterminate(false);
-
-        // Show score
-        new AlertDialog.Builder(this)
-                .setTitle("Quiz Completed")
-                .setMessage("Your score is: " + score + " out of " + maxScore)
-                .setPositiveButton("OK", (dialog, which) -> finish())
-                .show();
     }
 }

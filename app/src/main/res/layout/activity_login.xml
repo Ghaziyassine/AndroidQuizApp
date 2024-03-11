@@ -73,7 +73,7 @@
             android:text="Sign In"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:background="@drawable/rounded_button" /> <!-- Set background here -->
+            android:backgroundTint="@color/black"/>
 
 
         <!-- Register TextView -->
