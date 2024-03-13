@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.+")
     implementation("com.facebook.android:facebook-login:latest.release")
     implementation("com.mikhaellopez:circularprogressbar:3.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

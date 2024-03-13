@@ -32,6 +32,7 @@ public class registerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register); // This links the XML layout file
+        getWindow().setFlags(1024, 1024);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();

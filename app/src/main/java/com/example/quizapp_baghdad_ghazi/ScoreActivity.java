@@ -17,6 +17,7 @@ public class ScoreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+        getWindow().setFlags(1024, 1024);
 
         CircularProgressBar circularProgressBar = findViewById(R.id.circularProgressBar);
         TextView tvScoreTitle = findViewById(R.id.tvScoreTitle);

@@ -19,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getWindow().setFlags(1024, 1024);
 
         bStart = findViewById(R.id.bStart);
         btnLogout = findViewById(R.id.btnLogout);
